@@ -1,6 +1,8 @@
 /**
  * Created by Administrator on 2017/10/31.
  * promise简单使用
+ * 用图片加载完 来判断成功
+ * append一个图片
  */
 (function () {
     let pics = ['pic.jpg','pic.jpg'];
