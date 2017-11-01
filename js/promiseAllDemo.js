@@ -7,14 +7,15 @@
             // rej("rej");
             throw  new Error('fail');
             // res(id);
-        });
-        p.then(res => res);
+        }).then(res => res);
         return p;
     }
 
-    let ps = [14].map((id) => {
-        return getAPromise(id);
-    });
+    // let ps = [14].map((id) => {
+    //     return getAPromise(id);
+    // });
+
+    let ps = getAPromise(10);
 
     Promise.all([ps]).then(res => {
         console.log(res);
