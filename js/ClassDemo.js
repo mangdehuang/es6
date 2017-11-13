@@ -28,5 +28,20 @@
     }
     let a = new A('hello','world');
     a.printf();
+    console.log(typeof A);
+    console.log(A.prototype);
+    console.log(Object.keys(A.prototype));
 
+
+    console.log(a.hasOwnProperty('a'));
+    console.log(a.hasOwnProperty('printf'));
+    console.log(A.prototype.hasOwnProperty('printf'));
+    console.log(a.__proto__.hasOwnProperty('printf'));
+
+    const myClass = class Me{
+        getClassName(){
+            return Me.name;
+        }
+    }
+    console.log(new myClass().getClassName());
 })();
