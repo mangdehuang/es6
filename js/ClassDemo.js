@@ -44,4 +44,18 @@
         }
     }
     console.log(new myClass().getClassName());
+
+
+
+    class B{
+        foo(baz){
+            bar.call(this,baz);
+        }
+    }
+
+    function bar(baz) {
+        console.log(this,baz);
+    }
+
+    new B().foo('test');
 })();
